@@ -4,4 +4,6 @@
 /log/*.log
 /tmp
 .idea
+/doc
+.DS_Store
 

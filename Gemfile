@@ -2,19 +2,14 @@ source 'https://rubygems.org'
 
 gem 'rails', '4.0.0'
 
+# Backend
 gem 'sqlite3'
+gem 'cancan'
 
+# Frontend
 gem 'coffee-rails'
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
 gem 'jquery-rails'
-
-group :doc do
-  # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
-end
+# gem 'therubyracer', platforms: :ruby # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 
 group :development, :test do
   gem 'debugger'
