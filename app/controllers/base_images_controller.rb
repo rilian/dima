@@ -1,6 +1,5 @@
 class BaseImagesController < ApplicationController
-  load_resource
-
   def index
+    @base_images = BaseImage.all
   end
 end
