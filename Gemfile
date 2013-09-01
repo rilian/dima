@@ -5,6 +5,7 @@ gem 'rails', '4.0.0'
 # Backend
 gem 'sqlite3'
 gem 'cancan'
+gem 'carrierwave'
 
 # Frontend
 gem 'coffee-rails'
