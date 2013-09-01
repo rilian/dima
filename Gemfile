@@ -9,7 +9,13 @@ gem 'cancan'
 # Frontend
 gem 'coffee-rails'
 gem 'jquery-rails'
+gem 'sass-rails'
+gem 'uglifier'
 # gem 'therubyracer', platforms: :ruby # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+
+group :development do
+  gem 'quiet_assets'
+end
 
 group :development, :test do
   gem 'debugger'
