@@ -1,0 +1,11 @@
+<div ng-controller="BaseImagesController">
+  <div id="base_image-list-container">
+    <ul>
+      <li ng-repeat="base_image in base_images">
+        <h3>{{base_image.title}}</h3>
+        <p>{{base_image.image}}</p>
+        <p>{{base_image.desc}}</p>
+      </li>
+    </ul>
+  </div>
+</div>

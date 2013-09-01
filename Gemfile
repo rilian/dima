@@ -13,6 +13,7 @@ gem 'jquery-rails'
 gem 'sass-rails'
 gem 'uglifier'
 # gem 'therubyracer', platforms: :ruby # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+gem 'angularjs-rails'
 
 group :development do
   gem 'quiet_assets'
