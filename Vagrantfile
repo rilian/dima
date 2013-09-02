@@ -20,22 +20,14 @@ Vagrant::Config.run do |config|
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["cookbooks"]
     chef.add_recipe :apt
-    chef.add_recipe 'ruby_build'
-    chef.add_recipe 'rbenv::user'
     chef.add_recipe 'sqlite'
     chef.add_recipe 'git'
+    chef.add_recipe 'rvm::vagrant'
+    chef.add_recipe 'rvm::system'
     chef.add_recipe 'nginx'
     chef.json = {
-      :rbenv => {
-        :user_installs => [
-          {
-            :user   => "vagrant",
-            :rubies => [
-              "2.0.0-p247"
-            ],
-            :global => "2.0.0-p247"
-          }
-        ]
+      :rvm => {
+        :default_ruby => 'ruby-2.0.0-p247@dima'
       },
       :git   => {
         :prefix => "/usr/local"

@@ -3,8 +3,8 @@
 site 'http://community.opscode.com/api/v1'
 
 cookbook "apt"
-cookbook "ruby_build", {:github=>"fnichol/chef-ruby_build", :ref=>"v0.7.2"}
-cookbook "rbenv", {:github=>"fnichol/chef-rbenv"}
 cookbook "sqlite", {}
 cookbook "git", {}
+cookbook "build-essential", {}
+cookbook "rvm", {:github=>"fnichol/chef-rvm", :ref=>"v0.9.0"}
 cookbook "nginx", {}
