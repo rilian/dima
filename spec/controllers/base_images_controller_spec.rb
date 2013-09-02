@@ -3,8 +3,8 @@ require 'spec_helper'
 describe BaseImagesController do
   describe 'GET index' do
     before do
-      BaseImage.create(image: 'test.iso', title: 'A', desc: 'B')
-      BaseImage.create(image: 'test.iso', title: 'C', desc: 'D')
+      BaseImage.create(image_name: 'test.iso', title: 'A', desc: 'B')
+      BaseImage.create(image_name: 'test.iso', title: 'C', desc: 'D')
     end
 
     it 'renders all Base Images' do
@@ -21,7 +21,7 @@ describe BaseImagesController do
 
   describe 'GET show' do
     before do
-      @base_image = BaseImage.create(image: 'test.iso', title: 'A', desc: 'B')
+      @base_image = BaseImage.create(image_name: 'test.iso', title: 'A', desc: 'B')
     end
 
     it 'renders given Base Image' do
