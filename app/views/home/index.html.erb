@@ -2,8 +2,8 @@
   <div id="base_image-list-container">
     <ul>
       <li ng-repeat="base_image in base_images"
-          ng-click="showBaseImage(base_image)">
-        <h3>{{base_image.title}}</h3>
+          ng-click="showBaseImage(base_image, $index)">
+        <h3 ng-class="{active: $index == selectedRow}">{{base_image.title}}</h3>
         <p>Description: {{base_image.desc}}</p>
       </li>
     </ul>
@@ -12,7 +12,7 @@
   <div id="base_image-view-container" ng-show="selectedBaseImage">
     <h2>{{selectedBaseImage.title}}</h2>
 
-    <p>File: - <a ng-href="{{selectedBaseImage.link}}">{{selectedBaseImage.image_name}}</a></p>
+    <p>File: - <a ng-href="{{selectedBaseImage.image_name}}">{{selectedBaseImage.image_name}}</a></p>
     <p>Description: {{selectedBaseImage.desc}}</p>
     <p>Updated At: {{selectedBaseImage.updated_at | date: 'mediumDate'}}
   </div>
