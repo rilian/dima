@@ -15,6 +15,8 @@ Vagrant::Config.run do |config|
     config.vm.customize ['modifyvm', :id, "--#{k}", v]
   end
 
+  config.vm.forward_port 3000, 3000
+
   config.ssh.forward_agent = true
 
   config.vm.provision :chef_solo do |chef|
@@ -43,4 +45,6 @@ Vagrant::Config.run do |config|
       }
     }
   end
+
+  config.vm.provision :shell, :path => 'vagrant_scripts/after_script.sh'
 end
