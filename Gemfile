@@ -6,10 +6,11 @@ gem 'rails', '4.0.0'
 gem 'sqlite3'
 gem 'cancan'
 gem 'carrierwave'
+gem 'json', '>=1.6.1'
 
 # Frontend
 gem 'coffee-rails'
-gem 'jquery-rails'
+#gem 'jquery-rails'
 gem 'sass-rails'
 gem 'uglifier'
 # gem 'therubyracer', platforms: :ruby # See https://github.com/sstephenson/execjs#readme for more supported runtimes
@@ -17,6 +18,8 @@ gem 'angularjs-rails'
 
 group :development do
   gem 'quiet_assets'
+  gem 'vagrant', '>= 1.0.0'
+  gem 'librarian-chef'
 end
 
 group :development, :test do

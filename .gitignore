@@ -6,4 +6,5 @@
 .idea
 /doc
 .DS_Store
+/cookbooks
 
