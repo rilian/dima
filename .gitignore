@@ -7,4 +7,5 @@
 /doc
 .DS_Store
 /cookbooks
+.vagrant
 
