@@ -1,6 +1,6 @@
-class CreateBaseImages < ActiveRecord::Migration
+class CreateImages < ActiveRecord::Migration
   def change
-    create_table :base_images do |t|
+    create_table :images do |t|
       t.string :image_name
       t.string :title
       t.text :desc

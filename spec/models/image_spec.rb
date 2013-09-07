@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe BaseImage do
+describe Image do
   it { should have_db_column(:image_name).of_type(:string) }
   it { should have_db_column(:title).of_type(:string) }
   it { should have_db_column(:desc).of_type(:text) }

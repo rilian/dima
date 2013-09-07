@@ -15,7 +15,7 @@ Vagrant::Config.run do |config|
     config.vm.customize ['modifyvm', :id, "--#{k}", v]
   end
 
-  config.vm.forward_port 3000, 3000
+  config.vm.forward_port 3005, 3005
 
   config.ssh.forward_agent = true
 

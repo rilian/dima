@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20130901204900) do
 
-  create_table "base_images", force: true do |t|
+  create_table "images", force: true do |t|
     t.string   "image_name"
     t.string   "title"
     t.text     "desc"

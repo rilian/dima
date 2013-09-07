@@ -1,20 +1,20 @@
-<div ng-controller="BaseImagesController">
-  <div id="base_image-list-container">
+<div ng-controller="ImagesController">
+  <div id="image-list-container">
     <ul>
-      <li ng-repeat="base_image in base_images"
-          ng-click="showBaseImage(base_image, $index)">
-        <h3 ng-class="{active: $index == selectedRow}">{{base_image.title}}</h3>
-        <p>Description: {{base_image.desc}}</p>
+      <li ng-repeat="image in images"
+          ng-click="showImage(image, $index)">
+        <h3 ng-class="{active: $index == selectedRow}">{{image.title}}</h3>
+        <p>Description: {{image.desc}}</p>
       </li>
     </ul>
   </div>
 
-  <div id="base_image-view-container" ng-show="selectedBaseImage">
-    <h2>{{selectedBaseImage.title}}</h2>
+  <div id="image-view-container" ng-show="selectedImage">
+    <h2>{{selectedImage.title}}</h2>
 
-    <p>File: - <a ng-href="{{selectedBaseImage.image_name}}">{{selectedBaseImage.image_name}}</a></p>
-    <p>Description: {{selectedBaseImage.desc}}</p>
-    <p>Updated At: {{selectedBaseImage.updated_at | date: 'mediumDate'}}
+    <p>File: - <a ng-href="{{selectedImage.image_name}}">{{selectedImage.image_name}}</a></p>
+    <p>Description: {{selectedImage.desc}}</p>
+    <p>Updated At: {{selectedImage.updated_at | date: 'mediumDate'}}
   </div>
 
 </div>

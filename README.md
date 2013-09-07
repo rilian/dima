@@ -17,4 +17,4 @@ librarian-chef install
 vagrant up
 ```
 
-Try it on http://0.0.0.0:3000
+Try it on http://0.0.0.0:3005
