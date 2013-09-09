@@ -1,0 +1,10 @@
+<ul>
+  <li ng-repeat="image in images">
+    Title: {{image.title}} <br/>
+    Description: {{image.description}}
+    <a href="/images/{{image.id}}/edit">Edit</a>
+    <a href="" ng-click="destroy(image.id)">Delete</a>
+  </li>
+</ul>
+
+<a href="/images/new">Add new image</a>

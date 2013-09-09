@@ -11,9 +11,19 @@
 // about supported directives.
 //
 
-//= require angular
-//= require angular-resource
+// JQuery
+//= require jquery
+//= require jquery_ujs
 
-//= require app
+// AngularJS
+//= require angular/angular
+//= require angular/angular-resource
+//= require angular/angular-ui-states
 
-//= require_tree ./angular
+// app-specific js files
+//= require app/main
+//= require_tree ./app/controllers
+//= require_tree ./app/resources
+//= require_tree ./config
+//
+//= require_self

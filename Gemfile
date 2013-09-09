@@ -9,12 +9,12 @@ gem 'carrierwave'
 gem 'json', '>=1.6.1'
 
 # Frontend
-gem 'coffee-rails'
-#gem 'jquery-rails'
-gem 'sass-rails'
-gem 'uglifier'
-gem 'therubyracer', platforms: :ruby
 gem 'angularjs-rails'
+gem 'coffee-rails'
+gem 'sass-rails'
+gem 'therubyracer', platforms: :ruby
+gem 'uglifier'
+gem 'jquery-rails'
 
 group :development do
   gem 'quiet_assets'

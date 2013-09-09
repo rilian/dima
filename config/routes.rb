@@ -1,8 +1,12 @@
 Dima::Application.routes.draw do
-  scope :api do
-    get "/images(.:format)" => "images#index"
-    get "/images/:id(.:format)" => "images#show"
+  root to: 'home#index'
+
+  namespace :api do
+    resources :images
   end
 
-  root to: "home#index"
+  # Passthrough to frontend
+  get '/' => 'home#index'
+  get '/images' => 'home#index'
+  get '/images/*page' => 'home#index'
 end
