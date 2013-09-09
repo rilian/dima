@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ImagesController do
+describe Api::ImagesController do
   describe 'GET index' do
     before do
       Image.create(title: 'A', description: 'B')
@@ -8,7 +8,7 @@ describe ImagesController do
     end
 
     it 'renders all Base Images' do
-      get :index
+      get :index, format: :json
 
       expect(response.status).to eq(200)
       expect(response.body).to eq Image.all.to_json
@@ -25,7 +25,7 @@ describe ImagesController do
     end
 
     it 'renders given Base Image' do
-      get :show, id: @image.id
+      get :show, id: @image.id, format: :json
 
       expect(response.status).to eq(200)
       expect(response.body).to eq @image.to_json
